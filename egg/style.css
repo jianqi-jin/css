@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    background: hsl(200, 30%, 60%);
+}
+
+.sphere{
+    height: 20vw;
+    width: 20vw;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 20vw;
+    left: 30vw;
+    background-color: #666;
+    z-index: 2;
+    background-image: radial-gradient(ellipse 50% 50% at 70% 30%, #333, rgba(102, 102, 102, 0));
+}
+
+.heightLight{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle at 20% 30%, #fff, rgba(102, 102, 102, 0));
+    -webkit-mask-image: radial-gradient(ellipse 55% 50% at 40% 30%, #fff 80%, rgba(102, 102, 102, 0));
+}
+
+.shadow{
+    position: absolute;
+    height: 15vw;
+    width: 30vw;
+    background-color: rgba(34, 34, 34, 0.651);
+    top: 30vw;
+    left: 30vw;
+    z-index: 1;
+    background-image: radial-gradient(ellipse 25% 25% at 38% 59%, #1a1a1a 65%, rgba(51, 51, 51, 0.658));
+    -webkit-mask-image: radial-gradient(ellipse 40% 40% at 50% 50%, #333 99%, rgba(128, 125, 125, 0) 100%), radial-gradient(ellipse 40% 40% at 55% 49%, #333 94%, rgba(218, 218, 218, 0) 100%);
+}
