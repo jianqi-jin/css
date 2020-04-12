@@ -1,8 +1,9 @@
 body {
   margin: 0;
   overflow: hidden;
-  /* max-width: 300px; */
+  max-width: 300px;
   margin:auto;
+  perspective: 800px;
 }
 
 .wrap {
@@ -15,19 +16,19 @@ body {
 
 @keyframes rotate {
   0% {
-    transform: perspective(800px) rotateX(60deg);
+    transform: rotateX(60deg);
   }
   25% {
-    transform: perspective(800px)rotateZ(30deg) rotateX(70deg);
+    transform: rotateZ(30deg) rotateX(70deg);
   }
   50% {
-    transform: perspective(800px) rotateX(30deg);
+    transform: rotateX(30deg);
   }
   75% {
-    transform: perspective(800px)rotateZ(-30deg) rotateX(70deg);
+    transform: rotateZ(-30deg) rotateX(70deg);
   }
   100% {
-    transform: perspective(800px) rotateX(60deg);
+    transform: rotateX(60deg);
   }
 }
 
@@ -80,19 +81,19 @@ body {
 }
 @keyframes fly {
   0% {
-    transform: translate3d(-30vw, -10vw, 20vw) rotateY(0deg)
+    transform: translate3d(-30vw, 10vw, 20vw) rotateY(0deg)
   }
   5% {
-    transform: translate3d(-30vw, -10vw, 20vw) rotateY(30deg)
+    transform: translate3d(-30vw, 10vw, 20vw) rotateY(30deg)
   }
   50% {
-    transform: translate3d(30vw, 10vw, 20vw) rotateY(0deg)
+    transform: translate3d(30vw, -100vw, 20vw) rotateY(0deg)
   }
   55% {
-    transform: translate3d(30vw, 10vw, 20vw) rotateY(-30deg)
+    transform: translate3d(30vw, -100vw, 20vw) rotateY(-30deg)
   }
   100% {
-    transform: translate3d(-30vw, -10vw, 20vw) rotateY(0deg)
+    transform: translate3d(-30vw, 10vw, 20vw) rotateY(0deg)
   }
 }
 
