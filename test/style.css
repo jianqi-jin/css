@@ -1,7 +1,7 @@
 body {
   margin: 0;
   overflow: hidden;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin:auto;
 }
 
@@ -68,23 +68,31 @@ body {
   bottom: 10vw;
   left: 50%;
   animation: fly 3s infinite;
+  animation-delay: .3s;
 }
 
+.fly:nth-child(2){
+  
+  position: absolute;
+  bottom: 100vw;
+  left: 50%;
+  animation: fly 3s infinite;
+}
 @keyframes fly {
   0% {
-    transform: translate3d(-30vw, 0, 20vw) rotateY(0deg)
+    transform: translate3d(-30vw, -10vw, 20vw) rotateY(0deg)
   }
   5% {
-    transform: translate3d(-30vw, 0, 20vw) rotateY(30deg)
+    transform: translate3d(-30vw, -10vw, 20vw) rotateY(30deg)
   }
   50% {
-    transform: translate3d(30vw, 0, 20vw) rotateY(0deg)
+    transform: translate3d(30vw, 10vw, 20vw) rotateY(0deg)
   }
   55% {
-    transform: translate3d(30vw, 0, 20vw) rotateY(-30deg)
+    transform: translate3d(30vw, 10vw, 20vw) rotateY(-30deg)
   }
   100% {
-    transform: translate3d(-30vw, 0, 20vw) rotateY(0deg)
+    transform: translate3d(-30vw, -10vw, 20vw) rotateY(0deg)
   }
 }
 
@@ -99,6 +107,9 @@ body {
   animation: hit infinite .1s;
 }
 
+.fly:nth-child(2)::after{
+  height: 0;
+}
 @keyframes hit {
   0% {
     transform: translateY(0)
