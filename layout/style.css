@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+  padding: 0 200px;
+}
+.content>div{
+  height: 100vh;
+  float: left;
+}
+.middle{
+  background-color: black;
+  width: 100%;
+}
+
+.left{
+  background-color: red;
+  width: 200px;
+  left: -200px;
+  position: relative;
+}
+
+.right{
+  background-color: yellow;
+}

@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --color-body: hsl(20, 75%, 92%);
+  --color-elephant: hsl(34, 17%, 82%);
+  --color-elephant-dark: hsl(34, 10%, 69%);
+  --color-elephant-light: hsl(33, 17%, 90%);
+}
+
+.wrap {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-body);
+}
+
+.elephant {
+  position: absolute;
+  top: 20vw;
+  left: 20vw;
+  border: 1px solid #000;
+  height: 40vw;
+  width: 40vw;
+}
+
+.midSection {
+  height: 35%;
+  width: 50%;
+  background-color: var(--color-elephant);
+  border-radius: 100%;
+  top: calc(50% - 35% / 2);
+  left: calc(50% - 25%);
+  position: absolute;
+}
+
+.rump {
+  position: absolute;
+  height: 45%;
+  width: 36%;
+  background-color: var(--color-elephant);
+  border-radius: 100%;
+  transform: rotateZ(60deg);
+  top: calc(50% - 45% / 2 - 0%);
+  left: calc(50% - 36% / 2 - 16%);
+}
+
+.backLeg>:first-child {
+  height: 26%;
+  width: 26%;
+  position: absolute;
+  top: 55%;
+  left: 12%;
+  background-color: var(--color-elephant);
+  clip-path: polygon(0 0, 100% 30%, 62% 100%, 26% 100%);
+}
+
+.backLeg>:last-child {
+  content: "";
+  position: absolute;
+  top: 77%;
+  left: 18%;
+  width: 11%;
+  height: 16%;
+  background-color: var(--color-elephant);
+}
+
+.backLeg>:last-child::after {
+  content: "";
+  position: absolute;
+  height: 73%;
+  top: 63%;
+  width: 176%;
+  border-radius: 0 0 2vw 3vw;
+  left: -15%;
+  background: var(--color-elephant);
+  clip-path: polygon(10% 0, 60% 0, 100% 100%, 0% 100%);
+}
